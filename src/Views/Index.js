@@ -1,15 +1,16 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
+import React from "react";
+import { Outlet } from "react-router-dom";
+import Footer from "../Components/Footer";
+import Header from "../Components/Header";
 
 const Index = () => {
   return (
     <div>
-        <header>Soy el header</header>
-        <Outlet/>
-        <footer>Soy el footer</footer>
-
+      <Header />
+      <Outlet />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;

@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Index from "../Views/Index";
+import Checkout_Index from "../Views/Checkout/Checkout_Index";
 import About from "../Views/About";
 import Cart from "../Views/Checkout/Cart";
 import Checkout from "../Views/Checkout/Checkout";
@@ -24,7 +25,7 @@ const RoutesApp = () => {
         <Route path="*" element={<ErrorPage />} />        
       </Route>
 
-      <Route path="/" element={<Index />}>
+      <Route path="/" element={<Checkout_Index />}>
         <Route path="cart" element={<Cart />} />
         <Route path="payment" element={<Payment />} />
         <Route path="checkout" element={<Checkout />} />
