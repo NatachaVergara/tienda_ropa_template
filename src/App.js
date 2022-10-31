@@ -1,10 +1,12 @@
+
 import "./App.css";
+import RoutesApp from "./Routes/RoutesApp";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hola</h1>
-      
+      <RoutesApp/>
+     
     </div>
   );
 }
