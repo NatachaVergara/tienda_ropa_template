@@ -59,31 +59,31 @@ const HeaderNav = ({ onHandleModal }) => {
                                     </div>
                                 </div>
                             </div>
-                            <a
+                            <p
                                 className="nav-icon d-none d-lg-inline"
-                                href="#"
+                               
                                 onClick={onHandleModal}
                             >
                                 <i className="fa fa-fw fa-search text-dark mr-2"></i>
-                            </a>
-                            <a
+                            </p>
+                            <Link
                                 className="nav-icon position-relative text-decoration-none"
-                                href="#"
+                                to="/home"
                             >
                                 <i className="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
                                 <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">
                                     7
                                 </span>
-                            </a>
-                            <a
+                            </Link>
+                            <Link
                                 className="nav-icon position-relative text-decoration-none"
-                                href="#"
+                                to="/home"
                             >
                                 <i className="fa fa-fw fa-user text-dark mr-3"></i>
                                 <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">
                                     +99
                                 </span>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

@@ -27,10 +27,10 @@ const Hero = () => {
                                     <h3 className="h2">Tiny and Perfect eCommerce Template</h3>
                                     <p>
                                         Zay Shop is an eCommerce HTML5 CSS template with latest version of Bootstrap 5 (beta 1).
-                                        This template is 100% free provided by <a rel="sponsored" className="text-success" href="https://templatemo.com" target="_blank">TemplateMo</a> website.
-                                        Image credits go to <a rel="sponsored" className="text-success" href="https://stories.freepik.com/" target="_blank">Freepik Stories</a>,
-                                        <a rel="sponsored" className="text-success" href="https://unsplash.com/" target="_blank">Unsplash</a> and
-                                        <a rel="sponsored" className="text-success" href="https://icons8.com/" target="_blank">Icons 8</a>.
+                                        This template is 100% free provided by <a rel="noreferrer" className="text-success" href="https://templatemo.com" target="_blank" >TemplateMo</a> website.
+                                        Image credits go to <a rel="noreferrer" className="text-success" href="https://stories.freepik.com/" target="_blank">Freepik Stories</a>,
+                                        <a rel="noreferrer" className="text-success" href="https://unsplash.com/" target="_blank">Unsplash</a> and
+                                        <a rel="noreferrer" className="text-success" href="https://icons8.com/" target="_blank">Icons 8</a>.
                                     </p>
                                 </div>
                             </div>

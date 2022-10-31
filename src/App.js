@@ -2,7 +2,7 @@
 import "./App.css";
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
-import 'boxicons/dist/boxicons'
+
 import RoutesApp from "./Routes/RoutesApp";
 
 function App() {

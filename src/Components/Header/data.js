@@ -27,8 +27,4 @@ export const data_links = [
         link_to: '/contact',
         link_text: "Contacto",
     },
-
-
-
-
 ]

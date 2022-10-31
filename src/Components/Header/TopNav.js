@@ -29,7 +29,8 @@ const TopNav = () => {
                             className="text-light"
                             href="https://fb.com/templatemo"
                             target="_blank"
-                            rel="sponsored"
+                            rel="noreferrer"
+
                         >
                             <i className="fab fa-facebook-f fa-sm fa-fw me-2"></i>
                         </a>
@@ -37,16 +38,18 @@ const TopNav = () => {
                             className="text-light"
                             href="https://www.instagram.com/"
                             target="_blank"
+                            rel="noreferrer"
                         >
                             <i className="fab fa-instagram fa-sm fa-fw me-2"></i>
                         </a>
-                        <a className="text-light" href="https://twitter.com/" target="_blank">
+                        <a className="text-light" href="https://twitter.com/" target="_blank" rel="noreferrer">
                             <i className="fab fa-twitter fa-sm fa-fw me-2"></i>
                         </a>
                         <a
                             className="text-light"
                             href="https://www.linkedin.com/"
                             target="_blank"
+                            rel="noreferrer"
                         >
                             <i className="fab fa-linkedin fa-sm fa-fw"></i>
                         </a>
