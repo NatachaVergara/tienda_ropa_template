@@ -24,7 +24,7 @@ const RoutesApp = () => {
         <Route path="*" element={<ErrorPage />} />        
       </Route>
 
-      <Route path="/" element={<CheckoutIndex />}>
+      <Route path="/startpayment" element={<CheckoutIndex />}>
         <Route path="cart" element={<Cart />} />
         <Route path="payment" element={<Payment />} />
         <Route path="checkout" element={<Checkout />} />
