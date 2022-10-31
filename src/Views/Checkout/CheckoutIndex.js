@@ -9,10 +9,7 @@ const index = () => {
         <Header/>
         <Outlet/>
         <Footer/>
-        
-
-
-    </div>
+      </div>
   )
 }
 
