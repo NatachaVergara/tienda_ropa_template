@@ -1,10 +1,10 @@
 import React from "react";
 
-const ContactInfo = ({ id, i_className, a_className, a_href, contact_text }) => {
+const ContactInfo = ({ i_className, a_href, contact_text }) => {
     return (
-        <li key={id}>
+        <li>
             <i className={i_className} ></i>
-            <a className={a_className} href={a_href}>
+            <a className="text-decoration-none" href={a_href}>
                 {contact_text}
             </a>
         </li>

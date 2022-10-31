@@ -24,10 +24,8 @@ const Footer = () => {
             <ul className="list-unstyled text-light footer-link-list">
               {contact_info_data.map((li) => (
                 <ContactInfo
-                  key={li.id}
-                  id={li.id}
-                  i_className={li.i_className}
-                  a_className={li.a_className}
+                  key={li.id}                 
+                  i_className={li.i_className}                 
                   a_href={li.a_href}
                   contact_text={li.contact_text}
                 />
@@ -43,7 +41,6 @@ const Footer = () => {
               {products_data.map((li) => (
                 <FooterList
                   key={li.id}
-                  a_className={li.a_className}
                   a_href={li.a_href}
                   a_text={li.a_text}
                 />
@@ -53,13 +50,12 @@ const Footer = () => {
 
           <div className="col-md-4 pt-5">
             <h2 className="h2 text-light border-bottom pb-3 border-light">
-             Links
+              Links
             </h2>
             <ul className="list-unstyled text-light footer-link-list">
               {site_links.map((li) => (
                 <FooterList
                   key={li.id}
-                  a_className={li.a_className}
                   a_href={li.a_href}
                   a_text={li.a_text}
                 />
@@ -77,9 +73,6 @@ const Footer = () => {
               {social_media_data.map((li) => (
                 <SocialMedia
                   key={li.id}
-                  id={li.id}
-                  li_className={li.li_className}
-                  a_className={li.a_className}
                   a_target={li.a_target}
                   a_href={li.a_href}
                   i_className={li.i_className}

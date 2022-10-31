@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const FooterList = ({ a_className, a_href, a_text }) => {
+const FooterList = ({ a_href, a_text }) => {
   return (
     <li>
-      <a className={a_className} href={a_href}>
+      <Link className="text-decoration-none" to={a_href}>
         {a_text}
-      </a>
+      </Link>
     </li>
   );
 };
