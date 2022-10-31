@@ -10,18 +10,17 @@ import Contact from "../Views/Contact";
 import Home from "../Views/Home";
 import Profile from "../Views/Profile";
 import ErrorPage from "../Views/ErrorPage";
+import Shop from "../Views/Products/Shop";
 
 const RoutesApp = () => {
-  let user = false;
-
-  return (
+   return (
     <Routes>
       <Route path="/" element={<Index />}>
         <Route path="home" element={<Home />} />
         <Route path="contact" element={<Contact />} />
         <Route path="profile" element={<Profile />} />
         <Route path="about" element={<About />} />
-        <Route path="about" element={<About />} />
+        <Route path="shop" element={<Shop />} />
         <Route path="*" element={<ErrorPage />} />        
       </Route>
 

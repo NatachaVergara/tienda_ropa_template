@@ -5,12 +5,11 @@ import Header from "../Components/Header";
 
 const Index = () => {
   return (
-    <div>
-      <Header />
-      <h1>Bienvenidos</h1>
+    <>
+      <Header />     
       <Outlet />
       <Footer />
-    </div>
+    </>
   );
 };
 
