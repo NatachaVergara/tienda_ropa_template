@@ -1,4 +1,6 @@
 import React from 'react'
+import ContactContainer from '../Components/Contact/ContactContainer';
+
 
 const Contact = () => {
   const pageTitle = "Tienda Ropa - Contacto";
@@ -6,7 +8,7 @@ const Contact = () => {
 
   
   return (
-    <div>Contact</div>
+   <ContactContainer/>
   )
 }
 

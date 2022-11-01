@@ -1,19 +1,11 @@
-import React from 'react'
-import Banner from '../Components/About/Banner';
-import Brands from '../Components/About/Brands';
-import Services from '../Components/About/Services';
+import React from "react";
+import AboutContainer from "../Components/About/AboutContainer";
+
 
 const About = () => {
   const pageTitle = "Tienda Ropa - Sobre nosotros";
   document.title = pageTitle;
-  return (
-   <main>
-   <Banner/>
-   <Services/>
-   <Brands/>
-   
-   </main>
-  )
-}
+  return <AboutContainer />;
+};
 
-export default About
+export default About;
