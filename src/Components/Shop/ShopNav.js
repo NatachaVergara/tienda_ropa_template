@@ -117,6 +117,10 @@ const ShopNav = () => {
               img={card.img}
               img_alt={card.img_alt}
               price={card.price}
+              product_title={card.product_title}
+              size={card.size}
+              brand={card.brand}
+
             />
           ))}
         </div>

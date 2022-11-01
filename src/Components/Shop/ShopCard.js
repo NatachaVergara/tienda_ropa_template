@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ShopCard = ({img, img_alt, price}) => {
+const ShopCard = ({img, img_alt, price, brand, size}) => {
     return (
         <div className="col-md-4">
             <div className="card mb-4 product-wap rounded-0">
@@ -16,9 +16,14 @@ const ShopCard = ({img, img_alt, price}) => {
                     </div>
                 </div>
                 <div className="card-body">
-                    <a href="shop-single.html" className="h3 text-decoration-none">Oupidatat non</a>
+                    <a href="shop-single.html" className="h3 text-decoration-none">{brand} </a>
                     <ul className="w-100 list-unstyled d-flex justify-content-between mb-0">
-                        <li>M/L/X/XL</li>
+                        
+                        <li className='pt-2 d-flex justify-content-between'>
+                            {size.map(b=> (
+                                <span className='m-1'>{b}</span>
+                            ))}
+                        </li>
                         <li className="pt-2">
                             <span className="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
                             <span className="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
