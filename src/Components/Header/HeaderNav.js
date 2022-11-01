@@ -7,7 +7,7 @@ const HeaderNav = ({ onHandleModal }) => {
     return (
         <header>
             <nav className="navbar navbar-expand-lg navbar-light shadow">
-                <div className="container d-flex justify-content-between align-items-center">
+                <div className="container d-flex   justify-content-between align-items-center">
                     <Link
                         className="navbar-brand text-success logo h1 align-self-center"
                         to="/home"
@@ -15,17 +15,7 @@ const HeaderNav = ({ onHandleModal }) => {
                         Zay
                     </Link>
 
-                    <button
-                        className="navbar-toggler border-0"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#templatemo_main_nav"
-                        aria-controls="navbarSupportedContent"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
+                    
 
                     <div
                         className="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
@@ -86,6 +76,17 @@ const HeaderNav = ({ onHandleModal }) => {
                             </Link>
                         </div>
                     </div>
+                    <button
+                        className="navbar-toggler border-0"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#templatemo_main_nav"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
                 </div>
             </nav>
         </header>

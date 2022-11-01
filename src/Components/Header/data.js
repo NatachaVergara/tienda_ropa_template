@@ -11,14 +11,14 @@ export const data_links = [
         li_className: "nav-item",
         link_className: "nav-link",
         link_to: '/about',
-        link_text: "About"
+        link_text: "Sobre nosotros"
     },
     {
         id: 3,
         li_className: "nav-item",
         link_className: "nav-link",
         link_to: '/shop',
-        link_text: "Shop"
+        link_text: "Tienda"
     },
     {
         id: 4,
