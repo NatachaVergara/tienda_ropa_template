@@ -1,5 +1,5 @@
 import React from "react";
-import { data_services } from "./data";
+import { data_services } from "./aboutData";
 import ServiceCard from "./ServiceCard";
 
 const Services = () => {

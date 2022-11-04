@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { data_links } from './data'
+import { useStoreContext } from '../../Context/Store'
+import { data_links } from './headerData'
 import HeaderList from './HeaderList'
 
 const HeaderNav = ({ onHandleModal }) => {
+    const {itemQuantity} = useStoreContext()
     return (
         <header>
             <nav className="navbar navbar-expand-lg navbar-light shadow">
@@ -62,7 +64,7 @@ const HeaderNav = ({ onHandleModal }) => {
                             >
                                 <i className="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
                                 <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">
-                                    7
+                                    {itemQuantity() != 0 && itemQuantity()}
                                 </span>
                             </Link>
                             <Link
@@ -71,7 +73,7 @@ const HeaderNav = ({ onHandleModal }) => {
                             >
                                 <i className="fa fa-fw fa-user text-dark mr-3"></i>
                                 <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">
-                                    +99
+                                    
                                 </span>
                             </Link>
                         </div>

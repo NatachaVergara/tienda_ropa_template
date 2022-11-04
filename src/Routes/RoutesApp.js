@@ -12,9 +12,13 @@ import Profile from "../Views/Profile";
 import ErrorPage from "../Views/ErrorPage";
 import Shop from "../Views/Products/Shop";
 import ProductItem from "../Views/Products/Product_item";
+import { useStoreContext } from "../Context/Store";
 
 const RoutesApp = () => {
-   return (
+  //const { probando } = useStoreContext()
+  
+
+  return (
     <Routes>
       <Route path="/" element={<Index />}>
         <Route path="home" element={<Home />} />
@@ -23,7 +27,7 @@ const RoutesApp = () => {
         <Route path="about" element={<About />} />
         <Route path="shop" element={<Shop />} />
         <Route path="item" element={<ProductItem />} />
-        <Route path="*" element={<ErrorPage />} />        
+        <Route path="*" element={<ErrorPage />} />
       </Route>
 
       <Route path="/startpayment" element={<CheckoutIndex />}>

@@ -1,6 +1,6 @@
 import React from "react";
 import CategoryCard from "./CategoryCard";
-import { data_cards } from "./data";
+import { data_cards } from "./homeData";
 
 const CategoryMonth = () => {
   return (

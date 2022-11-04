@@ -1,5 +1,5 @@
 import React from "react";
-import { data_features } from "./data";
+import { data_features } from "./homeData";
 import FeatureCard from "./FeatureCard";
 
 const FeatureProducts = () => {

@@ -8,6 +8,7 @@ const HoritonzalNav = ({ shortListByPrice }) => {
                     className="form-control"
                     onChange={(e) => shortListByPrice(e.target.value)}
                 >
+                    <option value={""}></option>
                     <option value={"todo"}>Todo</option>
                     <option value={"menor"}>Menor Precio</option>
                     <option value={"mayor"}>Mayor Precio</option>

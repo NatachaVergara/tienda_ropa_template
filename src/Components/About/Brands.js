@@ -1,5 +1,5 @@
 import React from "react";
-import { data_slides } from "./data";
+import { data_slides } from "./aboutData";
 import Slide from "./Slide";
 
 const Brands = () => {

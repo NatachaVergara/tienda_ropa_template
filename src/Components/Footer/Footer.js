@@ -6,7 +6,7 @@ import {
   products_data,
   site_links,
   social_media_data,
-} from "./data";
+} from "./footerData";
 import FooterList from "./FooterList";
 import SocialMedia from "./SocialMedia";
 import Subscription from "./Subscription";

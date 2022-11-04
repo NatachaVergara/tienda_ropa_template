@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { data_card_img } from "./data";
+import React from "react";
+import { useStoreContext } from "../../Context/Store";
 import HoritonzalNav from "./HoritonzalNav";
 import ShopCard from "./ShopCard";
 import ShopPagination from "./ShopPagination";
@@ -7,17 +7,18 @@ import VerticalNav from "./VerticalNav";
 
 
 const ShopContainer = () => {
-    const [products, setProducts] = useState(data_card_img);
+
+    const { products, setProducts, data_card_img } = useStoreContext()
 
     const shortListByPrice = (value) => {
         if (value === "menor") {
             let lower = [...products].sort((a, b) => a.price - b.price);
             setProducts(lower);
-            console.log(products);
+            // console.log(products);
         } else if (value === "mayor") {
             let higher = [...products].sort((a, b) => b.price - a.price);
             setProducts(higher);
-            console.log(products);
+            //  console.log(products);
         } else {
             setProducts(data_card_img);
         }
@@ -46,18 +47,22 @@ const ShopContainer = () => {
                     <div className="row">
                         <HoritonzalNav shortListByPrice={shortListByPrice} />
                         <div className="col-12 row card-section">
-                            {products.map((card) => (
-                                <ShopCard
-                                    key={card.id}
-                                    img={card.img}
-                                    img_alt={card.img_alt}
-                                    price={card.price}
-                                    product_title={card.product_title}
-                                    size={card.size}
-                                    brand={card.brand}
+                            {products.length < 0 ? <h1>No hay productos disponibles</h1> :
+                                products.map((card) => (
+                                    <ShopCard
+                                        key={card.id}
+                                        img={card.img}
+                                        img_alt={card.img_alt}
+                                        price={card.price}
+                                        product_title={card.product_title}
+                                        size={card.size}
+                                        brand={card.brand}
+                                        obj={card}
 
-                                />
-                            ))}
+                                    />
+                                ))
+
+                            }
                         </div>
                         <ShopPagination array={data_card_img} />
                     </div>
