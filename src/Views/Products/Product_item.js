@@ -1,10 +1,11 @@
 import React from 'react'
+import ProductItemContainer from '../../Components/ProductItem/ProductItemContainer';
 
 const Product_item = () => {
   const pageTitle = "Tienda Ropa - Item";
   document.title = pageTitle;
   return (
-    <div>Product_item</div>
+    <ProductItemContainer />
   )
 }
 

@@ -20,8 +20,8 @@ const ShopCard = ({img, img_alt, price, brand, size}) => {
                     <ul className="w-100 list-unstyled d-flex justify-content-between mb-0">
                         
                         <li className='pt-2 d-flex justify-content-between'>
-                            {size.map(b=> (
-                                <span className='m-1'>{b}</span>
+                            {size.map((b, i)=> (
+                                <span key={i} className='m-1'>{b}</span>
                             ))}
                         </li>
                         <li className="pt-2">
