@@ -4,7 +4,7 @@ import ItemBody from './ItemBody'
 import ItemImages from './ItemImages'
 
 const ProductItemContainer = () => {
-  const { item, setItem, addItem } = useStoreContext()
+  const { item,  addItem } = useStoreContext()
   return (
     <main>
         <section className='itemContainer bg-light'>

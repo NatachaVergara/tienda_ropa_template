@@ -64,7 +64,7 @@ const HeaderNav = ({ onHandleModal }) => {
                             >
                                 <i className="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
                                 <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">
-                                    {itemQuantity() != 0 && itemQuantity()}
+                                    {itemQuantity() !== 0 && itemQuantity()}
                                 </span>
                             </Link>
                             <Link

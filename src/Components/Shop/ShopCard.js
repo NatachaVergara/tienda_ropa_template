@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useStoreContext } from '../../Context/Store'
 
 const ShopCard = ({obj, img, img_alt, price, brand, size}) => {
-    const {item, setItem, addItem} = useStoreContext()
+    const { setItem, addItem} = useStoreContext()
    
 
     return (
