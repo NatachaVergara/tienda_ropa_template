@@ -12,10 +12,9 @@ import Profile from "../Views/Profile";
 import ErrorPage from "../Views/ErrorPage";
 import Shop from "../Views/Products/Shop";
 import ProductItem from "../Views/Products/Product_item";
-import { useStoreContext } from "../Context/Store";
 
-const RoutesApp = () => {
-  //const { probando } = useStoreContext()
+
+const RoutesApp = () => { 
   
 
   return (
