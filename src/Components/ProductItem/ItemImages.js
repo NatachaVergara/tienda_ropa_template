@@ -34,19 +34,14 @@ const ItemImages = () => {
                         <div className="carousel-item active">
                             <div className="row">
                                 <div className="col-4">
-                                    <a href="#">
-                                        <img className="card-img img-fluid" src={product_single_01} alt="Product Image 1" />
-                                    </a>
+                                    <img className="card-img img-fluid" src={product_single_01} alt="Product_Image1" />
                                 </div>
                                 <div className="col-4">
-                                    <a href="#">
-                                        <img className="card-img img-fluid" src={product_single_02} alt="Product Image 2" />
-                                    </a>
+                                    <img className="card-img img-fluid" src={product_single_02} alt="Product_Image2" />
                                 </div>
                                 <div className="col-4">
-                                    <a href="#">
-                                        <img className="card-img img-fluid" src={product_single_03} alt="Product Image 3" />
-                                    </a>
+                                    <img className="card-img img-fluid" src={product_single_03} alt="Product_Image3" />
+
                                 </div>
                             </div>
                         </div>
@@ -56,19 +51,13 @@ const ItemImages = () => {
                         <div className="carousel-item">
                             <div className="row">
                                 <div className="col-4">
-                                    <a href="#">
-                                        <img className="card-img img-fluid" src={product_single_04} alt="Product Image 4" />
-                                    </a>
+                                    <img className="card-img img-fluid" src={product_single_04} alt="Product_Image4" />
                                 </div>
                                 <div className="col-4">
-                                    <a href="#">
-                                        <img className="card-img img-fluid" src={product_single_05} alt="Product Image 5" />
-                                    </a>
+                                    <img className="card-img img-fluid" src={product_single_05} alt="Product_Image5" />
                                 </div>
                                 <div className="col-4">
-                                    <a href="#">
-                                        <img className="card-img img-fluid" src={product_single_06} alt="Product Image 6" />
-                                    </a>
+                                    <img className="card-img img-fluid" src={product_single_06} alt="Product_Image6" />
                                 </div>
                             </div>
                         </div>
@@ -78,19 +67,16 @@ const ItemImages = () => {
                         <div className="carousel-item">
                             <div className="row">
                                 <div className="col-4">
-                                    <a href="#">
-                                        <img className="card-img img-fluid" src={product_single_07} alt="Product Image 7" />
-                                    </a>
+                                    <img className="card-img img-fluid" src={product_single_07} alt="Product_Image7" />
+
                                 </div>
                                 <div className="col-4">
-                                    <a href="#">
-                                        <img className="card-img img-fluid" src={product_single_08} alt="Product Image 8" />
-                                    </a>
+                                    <img className="card-img img-fluid" src={product_single_08} alt="Product_Image8" />
+
                                 </div>
                                 <div className="col-4">
-                                    <a href="#">
-                                        <img className="card-img img-fluid" src={product_single_09} alt="Product Image 9" />
-                                    </a>
+                                    <img className="card-img img-fluid" src={product_single_09} alt="Product_Image9" />
+
                                 </div>
                             </div>
                         </div>

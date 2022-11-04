@@ -1,4 +1,5 @@
 import React from 'react'
+import ItemCount from '../ItemCount.js/ItemCount'
 
 const ItemBody = () => {
     return (
@@ -60,23 +61,18 @@ const ItemBody = () => {
                                 <li className="list-inline-item"><span className="btn btn-success btn-size">XL</span></li>
                             </ul>
                         </div>
-                        <div className="col-auto quantity" >
-                            <ul className="list-inline pb-3">
-                                <li className="list-inline-item text-right">
-                                    Cantidad
-                                    <input type="hidden" name="product-quanity" id="product-quanity" value="1" />
-                                </li>
-                                <li className="list-inline-item"><span className="btn btn-success" id="btn-minus">-</span></li>
-                                <li className="list-inline-item"><span className="badge bg-secondary" id="var-value">1</span></li>
-                                <li className="list-inline-item"><span className="btn btn-success" id="btn-plus">+</span></li>
-                            </ul>
-                        </div>
+                       <ItemCount
+                         stock={30}
+                         initial={1}
+                         onAdd={null}   
+                       
+                       />
                     </div>
-                    <div className="row pb-3 buttons">                       
+                    {/* <div className="row pb-3 buttons">                       
                         <div className="col-12 col-md-4 m-auto d-grid">
                             <button type="submit" className="btn btn-success btn-lg" name="submit" value="addtocard">Agregar a carrito</button>
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
             </div>

@@ -11,7 +11,7 @@ import Home from "../Views/Home";
 import Profile from "../Views/Profile";
 import ErrorPage from "../Views/ErrorPage";
 import Shop from "../Views/Products/Shop";
-import Product_item from "../Views/Products/Product_item";
+import ProductItem from "../Views/Products/Product_item";
 
 const RoutesApp = () => {
    return (
@@ -22,7 +22,7 @@ const RoutesApp = () => {
         <Route path="profile" element={<Profile />} />
         <Route path="about" element={<About />} />
         <Route path="shop" element={<Shop />} />
-        <Route path="item" element={<Product_item />} />
+        <Route path="item" element={<ProductItem />} />
         <Route path="*" element={<ErrorPage />} />        
       </Route>
 
