@@ -8,11 +8,13 @@ import VerticalNav from "./VerticalNav";
 
 const ShopContainer = () => {
 
-    const { products, setProducts, data_card_img } = useStoreContext()
+    const { data_card_img, products, setProducts } = useStoreContext()
+    console.log(products)
+    
 
     const shortListByPrice = (value) => {
         if (value === "menor") {
-            let lower = [...products].sort((a, b) => a.price - b.price);
+            let lower =[ ...data_card_img].sort((a, b) => a.price - b.price);
             setProducts(lower);
             // console.log(products);
         } else if (value === "mayor") {
@@ -26,13 +28,13 @@ const ShopContainer = () => {
 
     const sortByGender = (value) => {
         if (value === "Mujeres") {
-            let woman = [...data_card_img].filter((m) => m.product_gender === "Mujeres");
+            let woman = products.filter((m) => m.product_gender === "Mujeres");
             setProducts(woman);
         } else if (value === "Hombres") {
-            let man = [...data_card_img].filter((m) => m.product_gender === "Hombres");
+            let man = products.filter((m) => m.product_gender === "Hombres");
             setProducts(man);
         } else {
-            let unisex = [...data_card_img].filter((m) => m.product_gender === "Unisex");
+            let unisex = products.filter((m) => m.product_gender === "Unisex");
             setProducts(unisex);
         }
     };
@@ -45,9 +47,9 @@ const ShopContainer = () => {
                 </section>
                 <section className="col-lg-9">
                     <div className="row">
-                        <HoritonzalNav shortListByPrice={shortListByPrice} />
+                        <HoritonzalNav shortListByPrice={shortListByPrice}  />
                         <div className="col-12 row card-section">
-                            {products.length < 0 ? <h1>No hay productos disponibles</h1> :
+                            {products.length === 0 ? <h1 className="m-5">No hay productos disponibles</h1> :
                                 products.map((card) => (
                                     <ShopCard
                                         key={card.id}
@@ -58,13 +60,12 @@ const ShopContainer = () => {
                                         size={card.size}
                                         brand={card.brand}
                                         obj={card}
-
                                     />
                                 ))
 
                             }
                         </div>
-                        <ShopPagination array={data_card_img} />
+                        <ShopPagination array={products} />
                     </div>
                 </section>
 

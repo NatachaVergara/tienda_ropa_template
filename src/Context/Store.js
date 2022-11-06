@@ -10,16 +10,22 @@ export const useStoreContext = () => {
 
 const StoreProvider = ({ children }) => {
     const [products, setProducts] = useState(Cookies.get('products') ? JSON.parse(Cookies.get('products')) : []);
+
     const [item, setItem] = useState(Cookies.get('item') ? JSON.parse(Cookies.get('item')) : {});
     const [cartItems, setCartItems] = useState(Cookies.get('cartItems') ? JSON.parse(Cookies.get('cartItems')) : []);
 
+
+    console.log(data_card_img)
+    console.log(products)
+   
+
     useEffect(() => {
-        Cookies.set('products', JSON.stringify(data_card_img))
-        Cookies.set('item', JSON.stringify(item))
-        Cookies.set('cartItems', JSON.stringify(cartItems))
+        Cookies.set('products', JSON.stringify(data_card_img) );
+        Cookies.set('item', JSON.stringify(item));
+        Cookies.set('cartItems', JSON.stringify(cartItems));
 
     }, [products, item, cartItems])
-
+ 
     const addItem = (item, quantity) => {
         let inCartList = cartItems.find(i => i.id === item.id);
 

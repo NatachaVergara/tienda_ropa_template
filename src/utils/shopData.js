@@ -26,8 +26,6 @@ export const data_card_img = [
     specification: ["Unisex.", "Con protección UV.", "Marco de poliamida.", "Incluye estuche", "Ideal para proteger tu vista del sol con estilo"],
     size: [],
     stock: 20,
-
-
   },
   {
     id: 2,
@@ -85,7 +83,6 @@ export const data_card_img = [
     size: [38, 39, 40, 46],
     stock: 5,
 
-
   },
   {
     id: 5,
@@ -104,7 +101,6 @@ export const data_card_img = [
     specification: [],
     size: [],
     stock: 1000,
-
   },
   {
     id: 6,
@@ -123,7 +119,6 @@ export const data_card_img = [
     specification: [],
     size: ["S", "M", "XXL"],
     stock: 50,
-
   },
   {
     id: 7,
@@ -162,26 +157,21 @@ export const data_card_img = [
     stock: 20,
   },
   {
-    id:9,
-    img:shop09,
-    img_alt:"shop0",
-    product_title:"Oupidatat non",
-    product_id:null,
-    product_object:null,
-    price:100,
+    id: 9,
+    img: shop09,
+    img_alt: "shop0",
+    product_title: "Oupidatat non",
+    product_id: null,
+    product_object: null,
+    price: 100,
     product_gender: "Unisex",
-    discount:null,
-    product_type:"anteojos",
+    discount: null,
+    product_type: "anteojos",
     brand: 'RAY-BAN',
     description: 'Lorem',
     available_color: [],
     specification: [],
     size: [],
-   stock: 3,
+    stock: 3,
   },
-];
-
-
-export const data_productos_type = [
-
 ]
