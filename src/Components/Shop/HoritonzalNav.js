@@ -9,9 +9,10 @@ const HoritonzalNav = ({ shortListByPrice }) => {
                     onChange={(e) => shortListByPrice(e.target.value)}
                 >
                     
-                    <option value={"todo"}>Todo</option>
-                    <option value={"menor"}>Menor Precio</option>
-                    <option value={"mayor"}>Mayor Precio</option>
+                    <option value={""}></option>
+                    <option value={"TODO"}>Todo</option>
+                    <option value={"MENOR"}>Menor Precio</option>
+                    <option value={"MAYOR"}>Mayor Precio</option>
                 </select>
            
         </div>

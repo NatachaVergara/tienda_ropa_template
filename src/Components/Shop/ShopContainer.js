@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useStoreContext } from "../../Context/Store";
 import HoritonzalNav from "./HoritonzalNav";
 import ShopCard from "./ShopCard";
@@ -7,37 +7,55 @@ import VerticalNav from "./VerticalNav";
 
 
 const ShopContainer = () => {
+    const { products, setProducts } = useStoreContext()
 
-    const { data_card_img, products, setProducts } = useStoreContext()
-    console.log(products)
-    
+    const [sortList, setSortList] = useState(products)
 
     const shortListByPrice = (value) => {
-        if (value === "menor") {
-            let lower =[ ...data_card_img].sort((a, b) => a.price - b.price);
-            setProducts(lower);
-            // console.log(products);
-        } else if (value === "mayor") {
-            let higher = [...products].sort((a, b) => b.price - a.price);
-            setProducts(higher);
-            //  console.log(products);
-        } else {
-            setProducts(data_card_img);
+        switch (value) {
+            case '':
+                setSortList(products);
+                setProducts(products);
+                break;
+            case 'MENOR':
+                let lower = products.sort((a, b) => a.price - b.price);
+                setSortList(lower);
+                console.log(sortList)
+                break;
+            case 'MAYOR':
+                let higher = products.sort((a, b) => b.price - a.price);
+                setSortList(higher);
+                console.log(products);
+                break;
+            case 'TODO':
+                setSortList(products);
+                setProducts(products);
+                break;
         }
-    };
+    }
+
+
 
     const sortByGender = (value) => {
-        if (value === "Mujeres") {
-            let woman = products.filter((m) => m.product_gender === "Mujeres");
-            setProducts(woman);
-        } else if (value === "Hombres") {
-            let man = products.filter((m) => m.product_gender === "Hombres");
-            setProducts(man);
-        } else {
-            let unisex = products.filter((m) => m.product_gender === "Unisex");
-            setProducts(unisex);
+
+        switch (value) {
+            case "Mujeres":
+                setSortList(products)
+                let woman = products.filter((m) => m.product_gender === "Mujeres");
+                setSortList(woman);
+                break;
+            case "Hombres":
+                setSortList(products)
+                let man = products.filter((m) => m.product_gender === "Hombres");
+                setSortList(man);
+                break;
+            case "Unisex":
+                let unisex = products.filter((m) => m.product_gender === "Unisex");
+                setSortList(unisex);
+                break;
         }
-    };
+
+    }
 
     return (
         <main className="container py-5">
@@ -47,10 +65,10 @@ const ShopContainer = () => {
                 </section>
                 <section className="col-lg-9">
                     <div className="row">
-                        <HoritonzalNav shortListByPrice={shortListByPrice}  />
+                        <HoritonzalNav shortListByPrice={shortListByPrice} />
                         <div className="col-12 row card-section">
                             {products.length === 0 ? <h1 className="m-5">No hay productos disponibles</h1> :
-                                products.map((card) => (
+                                sortList.map((card) => (
                                     <ShopCard
                                         key={card.id}
                                         img={card.img}
