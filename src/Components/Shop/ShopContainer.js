@@ -31,6 +31,10 @@ const ShopContainer = () => {
                 setSortList(products);
                 setProducts(products);
                 break;
+            default:
+                setSortList(products);
+                setProducts(products);
+                break;
         }
     }
 
@@ -53,6 +57,10 @@ const ShopContainer = () => {
                 let unisex = products.filter((m) => m.product_gender === "Unisex");
                 setSortList(unisex);
                 break;
+            default:
+                setSortList(products);
+                break;
+
         }
 
     }
