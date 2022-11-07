@@ -4,10 +4,7 @@ import { Outlet } from 'react-router-dom'
 const Cart = () => {
   return (
     <div>
-      Cart
-      <Outlet/>
-
-
+      Cart  
     </div>
   )
 }

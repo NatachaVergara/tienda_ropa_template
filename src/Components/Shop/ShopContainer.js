@@ -11,7 +11,7 @@ const ShopContainer = () => {
 
     const [sortList, setSortList] = useState(products)
     const [priceValue, setPriceValiu] = useState('TODO')
-console.log(priceValue)
+    //console.log(priceValue)
 
     const shortListByPrice = (value) => {
         switch (value) {

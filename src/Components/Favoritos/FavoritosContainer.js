@@ -1,11 +1,11 @@
 import React from 'react'
 import { useStoreContext } from '../../Context/Store'
 import CardFavorito from './CardFavorito'
-
+import EmptyFavoritos from './EmptyFavoritos'
 const FavoritosContainer = () => {
     const { favoritos } = useStoreContext();
 
-    const sinFavoritos = <h1>En este momento no hay favoritos seleccionados</h1>;
+    const sinFavoritos = <EmptyFavoritos /> ;
     const listFavoritos = <CardFavorito favoritos={favoritos}/>;
 
     return (

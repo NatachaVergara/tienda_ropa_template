@@ -28,11 +28,11 @@ const RoutesApp = () => {
         <Route path="shop" element={<Shop />} />
         <Route path="item" element={<ProductItem />} />
         <Route path="favoritos" element={<Favoritos />} />
+        <Route path="cart" element={<Cart />} />
         <Route path="*" element={<ErrorPage />} />
       </Route>
 
-      <Route path="/startpayment" element={<CheckoutIndex />}>
-        <Route path="cart" element={<Cart />} />
+      <Route path="/startpayment" element={<CheckoutIndex />}>        
         <Route path="payment" element={<Payment />} />
         <Route path="checkout" element={<Checkout />} />
         <Route path="*" element={<ErrorPage />} />
