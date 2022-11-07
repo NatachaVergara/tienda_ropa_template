@@ -1,6 +1,7 @@
 import Cookies from "js-cookie";
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { data_card_img } from "../utils/shopData";
+import Swal from 'sweetalert2'
 
 const StoreContext = createContext([]);
 
@@ -64,11 +65,17 @@ const StoreProvider = ({ children }) => {
         //console.log(favoritos)
 
         if (inFavoritos) {
-            alert('Este item ya se encuentra en favoritos');
+            Swal.fire('Este item ya se encuentra en favoritos')
             setFavoritos([...favoritos]);
         }
         else {
-            alert('Agregado');
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Guardado',
+                showConfirmButton: false,
+                timer: 1500
+            })
             setFavoritos([...favoritos, item]);
 
         }
