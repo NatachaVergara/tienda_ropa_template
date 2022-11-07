@@ -61,7 +61,7 @@ const StoreProvider = ({ children }) => {
 
     const addFavoritos = (item) => {
         let inFavoritos = favoritos.find(f => f.id === item.id);
-        console.log(favoritos)
+        //console.log(favoritos)
 
         if (inFavoritos) {
             alert('Este item ya se encuentra en favoritos');
