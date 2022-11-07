@@ -7,40 +7,43 @@ import VerticalNav from "./VerticalNav";
 
 
 const ShopContainer = () => {
-    const { products, setProducts } = useStoreContext()
+    const { products } = useStoreContext()
 
     const [sortList, setSortList] = useState(products)
     const [priceValue, setPriceValiu] = useState('TODO')
-    console.log(priceValue)
+console.log(priceValue)
 
     const shortListByPrice = (value) => {
         switch (value) {
             case '':
                 setPriceValiu(value)
                 setSortList(products);
-                setProducts(products);
+                // setProducts(products);
                 break;
             case 'MENOR':
                 setPriceValiu(value)
                 let lower = products.sort((a, b) => a.price - b.price);
                 setSortList(lower);
-                console.log(sortList)
+                // console.log(sortList)
                 break;
             case 'MAYOR':
                 setPriceValiu(value)
                 let higher = products.sort((a, b) => b.price - a.price);
                 setSortList(higher);
-                console.log(products);
+                // console.log(products);
                 break;
             case 'TODO':
+                console.log(value)
                 setPriceValiu(value)
                 setSortList(products);
-                setProducts(products);
+                // setProducts(products);
+                // console.log(products);
                 break;
             default:
                 setPriceValiu(value)
                 setSortList(products);
-                setProducts(products);
+                // setProducts(products);
+                // console.log(products);
                 break;
         }
     }
@@ -51,8 +54,7 @@ const ShopContainer = () => {
             case "Mujeres":
                 setSortList(products)
                 let woman = products.filter((m) => m.product_gender === "Mujeres");
-                setSortList(woman);             
-
+                setSortList(woman);
                 break;
             case "Hombres":
                 setSortList(products)

@@ -3,7 +3,7 @@ import React from 'react'
 import ItemCount from '../ItemCount.js/ItemCount'
 
 const ItemBody = ({item, addItem}) => {
-   //console.log(item)
+  
     const onAdd = (quantity)=>{
         addItem(item, quantity)
     } 

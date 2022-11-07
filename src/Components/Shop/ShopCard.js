@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useStoreContext } from '../../Context/Store'
 
-const ShopCard = ({obj, img, img_alt, price, brand, size}) => {
-    const { setItem, addItem} = useStoreContext()
-   
+const ShopCard = ({ obj, img, img_alt, price, brand, size }) => {
+    const { setItem, addItem, addFavoritos } = useStoreContext()
+
 
     return (
         <div className="col-md-4">
@@ -14,18 +14,18 @@ const ShopCard = ({obj, img, img_alt, price, brand, size}) => {
                     <div className="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                         <ul className="list-unstyled">
                             {/* estos son los campos donde uno puede poner acciones, like, add to card o mirar */}
-                            <li><span className="btn btn-success text-white" ><i className="far fa-heart"></i></span></li>                            
-                            <li><Link to={'/item'} className="btn btn-success text-white mt-2" onClick={()=> setItem(obj) } ><i className="far fa-eye"></i></Link></li>
-                            <li><span className="btn btn-success text-white mt-2" onClick={()=> addItem(obj, 1) } ><i className="fas fa-cart-plus"></i></span></li>
+                            <li onClick={() => addFavoritos(obj)}><span className="btn btn-success text-white" ><i className="far fa-heart"></i></span></li>
+                            <li><Link to={'/item'} className="btn btn-success text-white mt-2" onClick={() => setItem(obj)} ><i className="far fa-eye"></i></Link></li>
+                            <li><span className="btn btn-success text-white mt-2" onClick={() => addItem(obj, 1)} ><i className="fas fa-cart-plus"></i></span></li>
                         </ul>
                     </div>
                 </div>
                 <div className="card-body">
                     <a href="shop-single.html" className="h3 text-decoration-none">{brand} </a>
                     <ul className="w-100 list-unstyled d-flex justify-content-between mb-0">
-                        
+
                         <li className='pt-2 d-flex justify-content-between'>
-                            {size.map((b, i)=> (
+                            {size.map((b, i) => (
                                 <span key={i} className='m-1'>{b}</span>
                             ))}
                         </li>

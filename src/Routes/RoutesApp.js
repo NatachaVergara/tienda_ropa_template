@@ -12,6 +12,7 @@ import Profile from "../Views/Profile";
 import ErrorPage from "../Views/ErrorPage";
 import Shop from "../Views/Products/Shop";
 import ProductItem from "../Views/Products/Product_item";
+import Favoritos from "../Views/Favoritos";
 
 
 const RoutesApp = () => { 
@@ -26,6 +27,7 @@ const RoutesApp = () => {
         <Route path="about" element={<About />} />
         <Route path="shop" element={<Shop />} />
         <Route path="item" element={<ProductItem />} />
+        <Route path="favoritos" element={<Favoritos />} />
         <Route path="*" element={<ErrorPage />} />
       </Route>
 

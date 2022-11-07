@@ -15,9 +15,6 @@ const ProductItemContainer = () => {
                 </div>
             </div>
         </section>
-
-
-
     </main>
   )
 }

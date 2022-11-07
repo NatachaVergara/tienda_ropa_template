@@ -5,7 +5,8 @@ import { data_links } from './headerData'
 import HeaderList from './HeaderList'
 
 const HeaderNav = ({ onHandleModal }) => {
-    const {itemQuantity} = useStoreContext()
+    const { itemQuantity, favoritos, isLogged } = useStoreContext()
+
     return (
         <header>
             <nav className="navbar navbar-expand-lg navbar-light shadow">
@@ -17,7 +18,7 @@ const HeaderNav = ({ onHandleModal }) => {
                         Zay
                     </Link>
 
-                    
+
 
                     <div
                         className="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
@@ -53,7 +54,7 @@ const HeaderNav = ({ onHandleModal }) => {
                             </div>
                             <p
                                 className="nav-icon d-none d-lg-inline"
-                               
+
                                 onClick={onHandleModal}
                             >
                                 <i className="fa fa-fw fa-search text-dark mr-2"></i>
@@ -62,20 +63,36 @@ const HeaderNav = ({ onHandleModal }) => {
                                 className="nav-icon position-relative text-decoration-none"
                                 to="/home"
                             >
-                                <i className="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                                <i className={itemQuantity() === 0 ? "fa fa-fw fa-cart-arrow-down text-dark mr-1" : "fa fa-fw fa-cart-arrow-down text-success mr-1"}></i>
                                 <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">
                                     {itemQuantity() !== 0 && itemQuantity()}
                                 </span>
                             </Link>
                             <Link
                                 className="nav-icon position-relative text-decoration-none"
-                                to="/home"
+                                to="/favoritos"
+                            >
+                                {favoritos.length === 0 ? <i className="far fa-heart "></i> : <i className="fas fa-heart text-danger"></i>}
+                                <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">
+                                    {favoritos.length !== 0 && favoritos.length}
+                                </span>
+                            </Link>
+                            {isLogged ? <Link
+                                className="nav-icon position-relative text-decoration-none"
+                                to="/favoritos"
                             >
                                 <i className="fa fa-fw fa-user text-dark mr-3"></i>
                                 <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">
-                                    
                                 </span>
-                            </Link>
+                            </Link> :
+                             <Link
+                                className="nav-icon position-relative text-decoration-none"
+                                to="/home"
+                            >
+                                <i className="fas fa-sign-in-alt"></i>
+                                <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">
+                                </span>
+                            </Link>}
                         </div>
                     </div>
                     <button
