@@ -6,7 +6,7 @@ const EmptyFavoritos = () => {
     return (
         <div className='bgEmpty'>
             <h1 className='text-center mb-5'>En este momento no hay favoritos seleccionados</h1>
-            <img src={IMG} />
+            <img src={IMG} alt='imagen'/>
             <div className=''>
                 <Link to='/shop' className='text-decoration-none btn btn-outline-success mt-5'>Tienda</Link>
             </div>

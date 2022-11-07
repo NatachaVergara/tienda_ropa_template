@@ -10,7 +10,7 @@ const ShopContainer = () => {
     const { products } = useStoreContext()
 
     const [sortList, setSortList] = useState(products)
-    const [priceValue, setPriceValiu] = useState('TODO')
+    const [ setPriceValiu] = useState('TODO')
     //console.log(priceValue)
 
     const shortListByPrice = (value) => {
