@@ -5,6 +5,8 @@
 .btn-delete-fav{
   cursor: pointer;  
 }
-.cardFavorito:hover{ 
-  transition: all .1s ease-in-out;
+
+.error404 img{
+  max-width: 450px;
 }
+
