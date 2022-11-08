@@ -5,7 +5,7 @@ import CartItems from "./CartItems";
 
 
 const CartContainer = () => {
-  const { cartItems, cartTotalPrice, cartItemDelete, addFavoritos } = useStoreContext();
+  const { cartItems, cartTotalPrice, cartItemDelete, addFavoritos, setItem } = useStoreContext();
   console.log(cartItems)
   const cartListEmpty = <CartEmpty />
   return (
@@ -15,7 +15,7 @@ const CartContainer = () => {
           <h1 className="my-5 fs-3 d-flex justify-content-center">Mi carrito</h1>
           <div className="row">
             <section id="item" className="col-12 col-md-9">
-              <CartItems cartItems={cartItems} cartItemDelete={cartItemDelete} addFavoritos={addFavoritos} />
+              <CartItems cartItems={cartItems} cartItemDelete={cartItemDelete} addFavoritos={addFavoritos} setItem={setItem} />
             </section>
             <section id="total" className="col-12 col-md-3">
             <box-icon name='bell' animation='tada'></box-icon>

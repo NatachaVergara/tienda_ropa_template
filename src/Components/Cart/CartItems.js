@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const CartItems = ({ cartItems, cartItemDelete, addFavoritos }) => {
+const CartItems = ({ cartItems, cartItemDelete, addFavoritos,setItem }) => {
 
 
 
@@ -24,13 +25,13 @@ const CartItems = ({ cartItems, cartItemDelete, addFavoritos }) => {
           <tbody>
             <tr className='table-active'>
               <th className=''>{i.id} </th>
-              <th scope='row' className='d-flex justify-content-center align-items-center'>
+              <Link to='/item' scope='row' className='text-decoration-none text-dark d-flex justify-content-center align-items-center' onClick={()=> setItem(i)}>
                 <img src={i.img} alt={i.img_alt} style={{ maxWidth: 100, maxHeight: 100 }} />
                 <div className='text-start  ms-3 d-flex flex-column'>
                   <span className='fs-6'> {i.product_title} </span>
                   <span className='fs-6'>Color: Marron </span>
                 </div>
-              </th>
+              </Link>
               <th>{i.quantity}  </th>
               <th>$ {i.price}  </th>
               <th>$ {i.price * i.quantity}</th>
