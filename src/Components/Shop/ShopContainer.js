@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { useStoreContext } from "../../Context/Store";
 import HoritonzalNav from "./HoritonzalNav";
 import ShopCard from "./ShopCard";
