@@ -1,12 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import ItemCount from '../ItemCount.js/ItemCount'
 
-const ItemBody = ({item, addItem}) => {
-  
-    const onAdd = (quantity)=>{
+const ItemBody = ({ item, addItem }) => {
+
+    const onAdd = (quantity) => {
         addItem(item, quantity)
-    } 
+    }
 
 
     return (
@@ -51,22 +52,21 @@ const ItemBody = ({item, addItem}) => {
 
 
                     <div className="row ">
-                        <div className="col-auto size">
+                        {item.size.length > 0 && <div className="col-auto size">
                             <ul className="list-inline pb-3">
                                 <h3 className="list-inline-item fs-6">Talle:</h3>
                                 {item.size.length >= 1 && item.size.map((s, i) => (
                                     <li key={i} className="list-inline-item"><span className="btn btn-outline-success btn-size">{s} </span></li>
                                 ))}
-
                             </ul>
-                        </div>
+                        </div>}
                         <ItemCount
                             stock={item.stock}
                             initial={1}
                             onAdd={onAdd}
-                            to={'/shop'}
-
+                            to='/shop'
                         />
+                        <Link to='/cart' className='btn btn-outline-danger col-4 mx-auto my-2'  >Ver carrito</Link>
                     </div>
 
 

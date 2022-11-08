@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useStoreContext } from "../../Context/Store";
 import HoritonzalNav from "./HoritonzalNav";
 import ShopCard from "./ShopCard";
@@ -10,8 +10,8 @@ const ShopContainer = () => {
     const { products } = useStoreContext()
 
     const [sortList, setSortList] = useState(products)
-    const [ setPriceValiu] = useState('TODO')
-    //console.log(priceValue)
+    const [ priceValue, setPriceValiu] = useState('TODO')
+    console.log(priceValue)
 
     const shortListByPrice = (value) => {
         switch (value) {
@@ -48,6 +48,7 @@ const ShopContainer = () => {
         }
     }
 
+  
 
     const sortByGender = (value) => {
         switch (value) {

@@ -52,7 +52,7 @@ const StoreProvider = ({ children }) => {
     }
 
     const cartItemDelete = (id) => {
-        return cartItems.filter(e => e.id !== id);
+        setCartItems(cartItems.filter(e => e.id !== id));
     }
 
     const cartDelete = () => {
@@ -82,9 +82,9 @@ const StoreProvider = ({ children }) => {
     }
 
     const deleteFavorito = (id) => {
-        let newFavList = favoritos.filter(f => f.id !== id);
-        setFavoritos(newFavList)
+        setFavoritos(favoritos.filter(f => f.id !== id));
     }
+    
     const deleteFavoritos = () => {
         setFavoritos([])
     }
@@ -94,7 +94,7 @@ const StoreProvider = ({ children }) => {
 
     return (
         <StoreContext.Provider
-            value={{ products, setProducts, item, setItem, addItem, itemQuantity, cartTotalPrice, cartItemDelete, cartDelete, favoritos, addFavoritos, deleteFavorito, deleteFavoritos, isLogged, setIsLogged }}
+            value={{ products, setProducts, item, setItem, addItem, cartItems, itemQuantity, cartTotalPrice, cartItemDelete, cartDelete, favoritos, addFavoritos, deleteFavorito, deleteFavoritos, isLogged, setIsLogged }}
         >
             {children}
         </StoreContext.Provider>

@@ -34,10 +34,10 @@ const VerticalNav = ({sortByGender}) => {
                 </button>
                 <ul className="dropdown-menu">
                     <li>
-                        <span className="dropdown-item">Deportivos</span>
+                        <span className="dropdown-item">2x1</span>
                     </li>
                     <li>
-                        <span className="dropdown-item">Luxury</span>
+                        <span className="dropdown-item">10 %</span>
                     </li>
                 </ul>
                 <button

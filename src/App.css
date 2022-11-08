@@ -6,7 +6,9 @@
   cursor: pointer;  
 }
 
-.error404 img{
+.error404 img, .cartImg img{
   max-width: 450px;
 }
+
+
 

@@ -40,7 +40,7 @@ const Itemquantity = ({ stock, initial, onAdd, to }) => {
                 <Link to={to}
                     type="button"
                     className="btn btn-outline-warning col-12 col-md-5 my-1 m-md-auto">Volver al catálogo
-                </Link>
+                </Link>               
             </div>
         </div>
 
