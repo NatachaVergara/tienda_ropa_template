@@ -6,7 +6,7 @@ import CartItems from "./CartItems";
 
 const CartContainer = () => {
   const { cartItems, cartTotalPrice, cartItemDelete, addFavoritos, setItem } = useStoreContext();
-  console.log(cartItems)
+  
   const cartListEmpty = <CartEmpty />
   return (
     <main id="cart" className="container my-2">

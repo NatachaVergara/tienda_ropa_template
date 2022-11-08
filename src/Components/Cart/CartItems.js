@@ -3,10 +3,7 @@ import { Link } from 'react-router-dom'
 
 const CartItems = ({ cartItems, cartItemDelete, addFavoritos,setItem }) => {
 
-
-
-
-  return (
+ return (
     <div>
       {cartItems.map(i => (
         <table key={i.id} className='table table-hover container '>
