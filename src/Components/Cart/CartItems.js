@@ -1,28 +1,36 @@
 import React from 'react'
-
 import ItemsMd from './ItemsMd'
 import ItemsSm from './ItemsSm'
 
 
-const CartItems = ({ cartItems, cartItemDelete, addFavoritos, setItem }) => {
+const CartItems = ({ cartItems, cartItemDelete, addFavoritos }) => {
+  // const {addItem} = useStoreContext()
+
+  
+
 
   return (
     <div>
       <div className='d-none d-lg-flex flex-lg-column'>
-        <ItemsMd
-          cartItems={cartItems}
-          cartItemDelete={cartItemDelete}
-          addFavoritos={addFavoritos}
-          setItem={setItem}
-        />
+        {cartItems && cartItems.map(item => (
+          <ItemsMd
+            key={item.id}
+            item={item}
+            cartItemDelete={cartItemDelete}
+            addFavoritos={addFavoritos}
+          />
+        ))}
+
       </div>
       <div className='d-flex d-lg-none flex-column justify-content-center align-items-center' >
-        <ItemsSm
-          cartItems={cartItems}
-          cartItemDelete={cartItemDelete}
-          addFavoritos={addFavoritos}
-          setItem={setItem}
-        />
+        {cartItems && cartItems.map(item => (
+          <ItemsSm
+            key={item.id}
+            item={item}
+            cartItemDelete={cartItemDelete}
+            addFavoritos={addFavoritos}
+          />
+        ))}
       </div>
 
     </div>

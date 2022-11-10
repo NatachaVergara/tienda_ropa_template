@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import ItemCount from '../ItemCount.js/ItemCount'
+import ItemCount from '../ItemCount/ItemCount'
 
 const ItemBody = ({ item, addItem }) => {
 

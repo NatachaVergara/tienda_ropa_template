@@ -6,10 +6,12 @@ const Itemquantity = ({ stock, initial, onAdd, to }) => {
 
     const increase = () => {
         quantity < stock && setquantity(quantity + 1)
+       
     }
 
     const decrease = () => {
         quantity >= initial && setquantity(quantity - 1)
+      
     }
 
 
@@ -31,7 +33,7 @@ const Itemquantity = ({ stock, initial, onAdd, to }) => {
             </div>
             <p>
                 {stock === 0 ? 'No hay stock' : `stock: ${stock - quantity}`} </p>
-            <div className='row'>
+            <div className={`row `}>
                 <button
                     type="button"
                     className="btn btn-outline-success col-12 col-md-5 my-1 m-md-auto"
