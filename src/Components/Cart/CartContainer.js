@@ -6,19 +6,25 @@ import CartItems from "./CartItems";
 
 const CartContainer = () => {
   const { cartItems, cartTotalPrice, cartItemDelete, addFavoritos, setItem } = useStoreContext();
-  
+
   const cartListEmpty = <CartEmpty />
+
   return (
     <main id="cart" className="container my-2">
+
       {cartItems.length === 0 ? cartListEmpty :
         <>
           <h1 className="my-5 fs-3 d-flex justify-content-center">Mi carrito</h1>
           <div className="row">
-            <section id="item" className="col-12 col-md-9">
+            <section id="total" className="col-12 d-md-none">
+              <box-icon name='bell' animation='tada'></box-icon>
+              TOTAL ${cartTotalPrice()}
+            </section>
+            <section id="item" className="col-12 col-md-6 col-lg-9">
               <CartItems cartItems={cartItems} cartItemDelete={cartItemDelete} addFavoritos={addFavoritos} setItem={setItem} />
             </section>
-            <section id="total" className="col-12 col-md-3">
-            <box-icon name='bell' animation='tada'></box-icon>
+            <section id="total" className="col-12 col-md-6 col-lg-3">
+              <box-icon name='bell' animation='tada'></box-icon>
               TOTAL ${cartTotalPrice()}
             </section>
           </div></>
