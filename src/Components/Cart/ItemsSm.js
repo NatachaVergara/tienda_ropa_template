@@ -15,7 +15,7 @@ const ItemsSm = ({ cartItems, cartItemDelete, addFavoritos, setItem }) => {
                     <ul className="list-group list-group-flush">
                         <li className="list-group-item">Cantidad: {i.quantity}</li>
                         <li className="list-group-item">Precio: $ {i.price}</li>
-                        <li className="list-group-item">Subtotal: A $ {i.price * i.quantity}</li>
+                        <li className="list-group-item">Subtotal: $ {i.price * i.quantity}</li>
                     </ul>
                     <div className="card-body">
                         <button className='btn btn-success' onClick={() => addFavoritos(i)}>
