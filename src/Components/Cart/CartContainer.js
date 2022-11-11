@@ -31,7 +31,7 @@ const CartContainer = () => {
 
           <div className="row">
             <section id="total" className="col-12 d-md-none">
-              <box-icon name="bell" animation="tada"></box-icon>
+              <box-icon type='solid' name="shopping-bags"  animation="tada"></box-icon>
               TOTAL ${cartTotalPrice()}
             </section>
             <section id="item" className="col-12 col-md-6 col-lg-9">
@@ -43,7 +43,7 @@ const CartContainer = () => {
               />
             </section>
             <section id="total" className="col-12 col-md-6 col-lg-3">
-              <box-icon name="bell" animation="tada"></box-icon>
+              <box-icon type='solid' name="shopping-bags" animation="tada"></box-icon>
               <div>
                 <p> Cantidad de productos: {itemQuantity()} </p>
                 <p>Costo de envío: $ 350</p>
