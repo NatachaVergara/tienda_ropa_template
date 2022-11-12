@@ -34,8 +34,11 @@ const StoreProvider = ({ children }) => {
         if (inCartList) {
             inCartList.quantity += quantity;
             setCartItems([...cartItems])
+            Swal.fire('Item sumado')
+
         } else {
             setCartItems([...cartItems, { ...item, quantity }]);
+            Swal.fire('Producto agregado')
         }
     }
     // console.log(products)

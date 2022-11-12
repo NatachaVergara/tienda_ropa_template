@@ -9,6 +9,9 @@ const ItemBody = ({ item, addItem }) => {
         addItem(item, quantity)
     }
 
+  
+
+
 
     return (
         <div className="col-lg-7 mt-5">
