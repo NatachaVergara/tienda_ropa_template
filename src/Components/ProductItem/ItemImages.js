@@ -8,10 +8,10 @@ const ItemImages = ({ item }) => {
         <div className='col-lg-5 mt-5'>
             <Carousel showArrows={true} autoPlay emulateTouch showIndicators={false} >
                 <div>
-                    <img src={item.img} />
+                    <img src={item.img} alt={item.img_alt} />
                 </div>
                 <div>
-                    <img src='https://picsum.photos/200' />
+                    <img src='https://picsum.photos/200' alt='img carousel' />
                 </div>
 
             </Carousel>
