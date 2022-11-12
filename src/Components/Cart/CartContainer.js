@@ -12,8 +12,9 @@ const CartContainer = () => {
     addFavoritos,
     setItem,
     itemQuantity,
+    provincias
   } = useStoreContext();
-
+  console.log(provincias)
   const cartListEmpty = <CartEmpty />;
 
   return (
@@ -31,7 +32,7 @@ const CartContainer = () => {
 
           <div className="row">
             <section id="total" className="col-12 d-md-none">
-              <box-icon type='solid' name="shopping-bags"  animation="tada"></box-icon>
+              <box-icon type='solid' name="shopping-bags" animation="tada"></box-icon>
               TOTAL ${cartTotalPrice()}
             </section>
             <section id="item" className="col-12 col-md-6 col-lg-9">
@@ -46,6 +47,13 @@ const CartContainer = () => {
               <box-icon type='solid' name="shopping-bags" animation="tada"></box-icon>
               <div>
                 <p> Cantidad de productos: {itemQuantity()} </p>
+                <select className="form-select " aria-label="Default select example">
+                  <option defaultValue className="w-50">Elegir provincia</option>
+                  {provincias.length > 0 && provincias.map(p => (
+                    <option value={p.nombre} key={p.id}> {p.nombre} </option>
+                  ))}
+
+                </select>
                 <p>Costo de envío: $ 350</p>
                 <p> Orden total ${360 + cartTotalPrice()}</p>
                 <Link to='/startpayment/checkout' className="btn btn-outline-dark">Dirección y pago</Link>

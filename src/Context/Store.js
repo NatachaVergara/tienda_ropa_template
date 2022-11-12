@@ -2,6 +2,7 @@ import Cookies from "js-cookie";
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { data_card_img } from "../utils/shopData";
 import Swal from 'sweetalert2'
+import axios from "axios";
 
 const StoreContext = createContext([]);
 
@@ -87,17 +88,34 @@ const StoreProvider = ({ children }) => {
     const deleteFavorito = (id) => {
         setFavoritos(favoritos.filter(f => f.id !== id));
     }
-    
+
     const deleteFavoritos = () => {
         setFavoritos([])
     }
 
+    const [provincias, setProvincias] = useState([])
+    const getProvincias = async () => {
+        let respose = await axios.get(`https://apis.datos.gob.ar/georef/api/provincias`)
+        let data = respose.data
+        setProvincias(data.provincias)
+        // console.log(data)
+    }
 
+    const provinciaPorLetra = (a, b) => {
+        return a.nombre < b.nombre ? -1 : 1
+    }
+
+    provincias.sort(provinciaPorLetra)
+
+    useEffect(() => {
+        getProvincias()
+
+    }, [])
 
 
     return (
         <StoreContext.Provider
-            value={{ products, setProducts, item, setItem, addItem, cartItems, itemQuantity, cartTotalPrice, cartItemDelete, cartDelete, favoritos, addFavoritos, deleteFavorito, deleteFavoritos, isLogged, setIsLogged }}
+            value={{ products, setProducts, item, setItem, addItem, cartItems, itemQuantity, cartTotalPrice, cartItemDelete, cartDelete, favoritos, addFavoritos, deleteFavorito, deleteFavoritos, isLogged, setIsLogged, provincias }}
         >
             {children}
         </StoreContext.Provider>
