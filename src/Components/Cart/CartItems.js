@@ -3,7 +3,7 @@ import ItemsMd from './ItemsMd'
 import ItemsSm from './ItemsSm'
 
 
-const CartItems = ({ cartItems, cartItemDelete, addFavoritos }) => {
+const CartItems = ({ cartItems, cartItemDelete, addFavoritos, setItem }) => {
   // const {addItem} = useStoreContext()
 
   
@@ -18,6 +18,7 @@ const CartItems = ({ cartItems, cartItemDelete, addFavoritos }) => {
             item={item}
             cartItemDelete={cartItemDelete}
             addFavoritos={addFavoritos}
+            setItem={setItem}
           />
         ))}
 
@@ -29,6 +30,7 @@ const CartItems = ({ cartItems, cartItemDelete, addFavoritos }) => {
             item={item}
             cartItemDelete={cartItemDelete}
             addFavoritos={addFavoritos}
+            setItem={setItem}
           />
         ))}
       </div>

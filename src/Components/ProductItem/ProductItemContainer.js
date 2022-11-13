@@ -11,8 +11,7 @@ const ProductItemContainer = () => {
             <div className='container pb-5'>
                 <div className='row'>
                     <ItemImages item={item}  />
-                    <ItemBody item={item} addItem={addItem} />
-                  
+                    <ItemBody item={item} addItem={addItem} />                  
                 </div>
             </div>
         </section>
