@@ -7,16 +7,19 @@ const ItemBody = ({ item, addItem, cartItems }) => {
     const [selected, setSelected] = useState(false)
    // console.log(selected)
 
-    //Permite desactivar el boton agregar al carrito
-    const inCart = (item) => {
-       // console.log(cartItems)
-        let inCartList = cartItems.find(i => i.id === item.id);
-        inCartList ? setSelected(true) : setSelected(false)
-    }
+   
 
     useEffect(() => {
-        inCart(item)
-    }, [inCart])
+        //Permite desactivar el boton agregar al carrito
+    const inCart = (item) => {
+        // console.log(cartItems)
+         let inCartList = cartItems.find(i => i.id === item.id);
+         inCartList ? setSelected(true) : setSelected(false)
+     }
+
+     inCart(item)
+
+    }, [cartItems, item])
 
     
 
