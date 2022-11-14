@@ -1,9 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Swal from 'sweetalert2'
 import { useStoreContext } from '../../Context/Store'
 
 const ShopCard = ({ obj, img, img_alt, price, brand, size }) => {
-    const { setItem, addItem, addFavoritos } = useStoreContext()
+    const { setItem, addItem, addFavoritos, cartItems } = useStoreContext()
+
+    const inCartList = (obj)=>{
+        let isTrue = cartItems.find(i => i.id === obj.id )
+        isTrue ? Swal.fire('Ya se encuentra en carrito') :  addItem(obj, 1)
+    }
+
 
 
     return (
@@ -16,7 +23,7 @@ const ShopCard = ({ obj, img, img_alt, price, brand, size }) => {
                             {/* estos son los campos donde uno puede poner acciones, like, add to card o mirar */}
                             <li onClick={() => addFavoritos(obj)} title='AGREGAR FAVORITOS'><span className="btn btn-success text-white" ><i className="far fa-heart"></i></span></li>
                             <li><Link to={'/item'} title='VER PRODUCTO' className="btn btn-success text-white mt-2" onClick={() => setItem(obj)} ><i className="far fa-eye"></i></Link></li>
-                            <li><span className="btn btn-success text-white mt-2" title='AGREGAR A CARRITO' onClick={() => addItem(obj, 1)} ><i className="fas fa-cart-plus"></i></span></li>
+                            <li><span className="btn btn-success text-white mt-2" title='AGREGAR A CARRITO' onClick={() => inCartList(obj)} ><i className="fas fa-cart-plus"></i></span></li>
                         </ul>
                     </div>
                 </div>

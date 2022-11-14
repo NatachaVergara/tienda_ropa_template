@@ -41,7 +41,7 @@ const CartContainer = () => {
     setPrecioFinal(constoEnvio + cartTotalPrice());
   }, [constoEnvio, cartTotalPrice]);
 
-  console.log(provincias);
+ // console.log(provincias);
   const cartListEmpty = <CartEmpty />;
 
   return (

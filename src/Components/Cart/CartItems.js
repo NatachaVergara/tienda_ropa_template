@@ -1,10 +1,11 @@
 import React from 'react'
+import { useStoreContext } from '../../Context/Store'
 import ItemsMd from './ItemsMd'
 import ItemsSm from './ItemsSm'
 
 
-const CartItems = ({ cartItems, cartItemDelete, addFavoritos, setItem }) => {
-  // const {addItem} = useStoreContext()
+const CartItems = ({ cartItems, cartItemDelete, addFavoritos, setItem}) => {
+ const {setCartItems} = useStoreContext()
 
   
 
@@ -19,6 +20,9 @@ const CartItems = ({ cartItems, cartItemDelete, addFavoritos, setItem }) => {
             cartItemDelete={cartItemDelete}
             addFavoritos={addFavoritos}
             setItem={setItem}
+            cartItems={cartItems}
+            setCartItems={setCartItems}
+          
           />
         ))}
 

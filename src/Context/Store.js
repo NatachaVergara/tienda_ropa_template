@@ -16,7 +16,7 @@ const StoreProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState(Cookies.get('cartItems') ? JSON.parse(Cookies.get('cartItems')) : []);
     const [favoritos, setFavoritos] = useState(Cookies.get('favoritos') ? JSON.parse(Cookies.get('favoritos')) : []);
     const [isLogged, setIsLogged] = useState(false);
-
+    
     useEffect(() => {
         setProducts(data_card_img)
     }, [])
@@ -26,25 +26,23 @@ const StoreProvider = ({ children }) => {
         Cookies.set('item', JSON.stringify(item));
         Cookies.set('cartItems', JSON.stringify(cartItems));
         Cookies.set('favoritos', JSON.stringify(favoritos));
+      
 
     }, [products, item, cartItems, favoritos])
 
     const addItem = (item, quantity) => {
         let inCartList = cartItems.find(i => i.id === item.id);
-        console.log(inCartList)
+       // console.log(inCartList)
         if (inCartList) {
-            inCartList.quantity += quantity;
+            inCartList.quantity += quantity;           
             setCartItems([...cartItems])
-            Swal.fire('Item sumado')
-
+            // Swal.fire('Item sumado')
         } else {
-            setCartItems([...cartItems, { ...item, quantity }]);
-            Swal.fire('Producto agregado')
+            setCartItems([...cartItems, { ...item, quantity }]);           
+            // Swal.fire('Producto agregado')
         }
     }
-    // console.log(products)
-    // console.log(item)
-    // console.log(cartItems)
+
 
 
     const itemQuantity = () => {
@@ -115,7 +113,7 @@ const StoreProvider = ({ children }) => {
 
     return (
         <StoreContext.Provider
-            value={{ products, setProducts, item, setItem, addItem, cartItems, itemQuantity, cartTotalPrice, cartItemDelete, cartDelete, favoritos, addFavoritos, deleteFavorito, deleteFavoritos, isLogged, setIsLogged, provincias }}
+            value={{ products, setProducts, item, setItem, addItem, cartItems, setCartItems, itemQuantity, cartTotalPrice, cartItemDelete, cartDelete, favoritos, addFavoritos, deleteFavorito, deleteFavoritos, isLogged, setIsLogged, provincias }}
         >
             {children}
         </StoreContext.Provider>

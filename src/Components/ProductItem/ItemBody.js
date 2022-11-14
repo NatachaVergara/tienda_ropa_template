@@ -1,15 +1,32 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import Swal from 'sweetalert2'
 
-import ItemCount from '../ItemCount/ItemCount'
 
-const ItemBody = ({ item, addItem }) => {
+const ItemBody = ({ item, addItem, cartItems }) => {
+    const [selected, setSelected] = useState(false)
+   // console.log(selected)
+
+    //Permite desactivar el boton agregar al carrito
+    const inCart = (item) => {
+       // console.log(cartItems)
+        let inCartList = cartItems.find(i => i.id === item.id);
+        inCartList ? setSelected(true) : setSelected(false)
+    }
+
+    useEffect(() => {
+        inCart(item)
+    }, [inCart])
+
+    
+
 
     const onAdd = (quantity) => {
         addItem(item, quantity)
+        Swal.fire('Producto agregado')
     }
 
-  
+
 
 
 
@@ -55,21 +72,27 @@ const ItemBody = ({ item, addItem }) => {
 
 
                     <div className="row ">
-                        {item.size.length > 0 && <div className="col-auto size">
-                            <ul className="list-inline pb-3">
-                                <h3 className="list-inline-item fs-6">Talle:</h3>
-                                {item.size.length >= 1 && item.size.map((s, i) => (
-                                    <li key={i} className="list-inline-item"><span className="btn btn-outline-success btn-size">{s} </span></li>
-                                ))}
-                            </ul>
-                        </div>}
-                        <ItemCount
-                            stock={item.stock}
-                            initial={1}
-                            onAdd={onAdd}
-                            to='/shop'
-                        />
-                        <Link to='/cart' className='btn btn-outline-danger col-4 mx-auto my-2'  >Ver carrito</Link>
+                        {item.size.length > 0 &&
+                            <div className="col-12 size">
+                                <ul className="list-inline pb-3">
+                                    <h3 className="list-inline-item fs-6">Talle:</h3>
+                                    {item.size.length >= 1 && item.size.map((s, i) => (
+                                        <li key={i} className="list-inline-item"><span className="btn btn-outline-success btn-size">{s} </span></li>
+                                    ))}
+                                </ul>
+                            </div>
+                        }
+                        <div className='col-12'>
+                            {selected ?
+                                <button disabled={selected} className='btn btn-success w-25 m-3'>Ya se encuentra en carrito </button>
+                                :
+                                <button disabled={selected} onClick={() => onAdd(1)} className='btn btn-success w-25 m-3'>Agregar a carrito </button>
+                            }
+                            <Link to='/shop' className='btn btn-outline-danger me-2'>Shop</Link>
+                            <Link to='/cart' className='btn btn-outline-danger me-2'>Carrito</Link>
+                            
+
+                        </div>
                     </div>
 
 

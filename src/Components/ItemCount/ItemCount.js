@@ -10,8 +10,7 @@ const Itemquantity = ({ stock, initial, onAdd, to }) => {
     }
 
     const decrease = () => {
-        quantity >= initial && setquantity(quantity - 1)
-      
+        quantity >= initial && setquantity(quantity - 1)      
     }
 
 

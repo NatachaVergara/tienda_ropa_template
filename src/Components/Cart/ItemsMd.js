@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const ItemsMd = ({ item, cartItemDelete, addFavoritos, setItem }) => {
+import ItemCount from "./ItemCount";
+const ItemsMd = ({ item, cartItemDelete, addFavoritos, setItem, cartItems, setCartItems }) => {
 
   return (
     <table key={item.id} className="table table-hover container ">
@@ -37,7 +38,9 @@ const ItemsMd = ({ item, cartItemDelete, addFavoritos, setItem }) => {
               </div>
             </Link>
           </th>
-          <th className="w-25"><input type='number' value={item.quantity} onChange={() => { }} className='w-25' /></th>
+          <th className="w-25 ">
+            <ItemCount initial={item.quantity} stock={item.stock} item={item} cartItems={cartItems} setCartItems={setCartItems} />
+          </th>
           <th>$ {item.price} </th>
           <th>$ {item.price * item.quantity}</th>
           <th className="col">
